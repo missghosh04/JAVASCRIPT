@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css">
+</head>
+
+<body>
+    <h1>Form with Card</h1>
+    <form id="dataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <button type="button" id="submitBtn" class="btn">Submit</button>
+        <button type="reset" class="btn">Delete</button>
+    </form>
+
+    <div id="cardContainer">
+        <div class="card"></div>
+    </div>
+    <script>
+        const form = document.getElementById('dataForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const cardContainer = document.getElementById('cardContainer');
+        var n = document.querySelector("#name")
+        var e = document.querySelector("#email")
+        submitBtn.addEventListener('click', () => {
+            console.log(n.value);
+            let card = document.querySelector(".card");
+            // card.innerHTML = `<h1>${n.value}</h1>`;
+            var name = n.value;
+            var email = e.value;
+            card.innerHTML = '';
+
+            // Create a new card
+            var card2 = document.createElement('div');
+            // card.className = 'card';
+
+            // Add content to the card
+            card.innerHTML = `
+                    <h2> ${name}</h2>
+                    <p> ${email}</p>
+                `;
+
+        })
+
+       
+
+    </script>
+</body>
+
+</html>

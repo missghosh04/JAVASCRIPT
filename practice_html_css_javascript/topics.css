@@ -1,0 +1,43 @@
+.container{
+    background-color: aqua;
+    width: 80vw;
+    height: 50vh;
+}
+html{
+    font-size: 20px;
+}
+.box{
+    background-color: red;
+    width: 80%;
+    height: 80%;
+    font-size: 4px;
+    display: inline-block;
+}
+.box1{
+    background-color: purple;
+    width: 20%;
+    font-size: 2em;
+}
+.me{
+    padding: 20px;
+    border: 2px solid black;
+    margin :10px;
+}
+span{
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid black;
+    margin :10px;
+    /* display: none; */
+    /* visibility: hidden; */
+    box-shadow: 5px 5px 10px 4px rgb(97, 187, 45);
+    text-shadow: 2px 2px 2px rgb(214, 141, 141);
+    outline: 2px solid green;
+    outline-offset: 10px;
+}
+li{
+    list-style: devanagari;
+    background-color: yellowgreen;
+    list-style-position: inside;
+    list-style-image:url("harry_potter.png") ;
+}

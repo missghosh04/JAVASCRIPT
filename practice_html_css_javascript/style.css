@@ -1,0 +1,14 @@
+body{
+    
+}
+td{
+    border: 2px solid black;
+}
+#submit{
+    color: aqua;
+    background-color: black;
+}
+canvas{
+    background-color: rgb(223, 144, 144);
+    border: 2px solid black;
+}

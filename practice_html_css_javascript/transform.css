@@ -1,0 +1,15 @@
+.container {
+    height: 40vh;
+    width: 80vw;
+    background-color: rgb(195, 122, 26);
+    border: 2px solid blue;
+}
+
+.box {
+    height: 80px;
+    width: 80px;
+    background-color: aqua;
+    border: 2px solid black;
+    transform: translatex(30%)rotatex(40deg)skew(30deg);
+    transform-origin: 0% 0%;
+}

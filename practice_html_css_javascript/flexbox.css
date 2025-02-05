@@ -1,0 +1,27 @@
+.container{
+    border: 2px solid red;
+    height: 80vh;
+    width: 80vw;
+    display:flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-content: center; */
+    /* flex-flow: column wrap; */
+}
+.item{
+    height: 30px;
+    width: 30px;
+    background-color: violet;
+    border: 2px solid black;
+    margin: 10px;
+}
+.box1{
+    order:1;
+    flex-grow: 2;
+    flex-shrink: 2;
+}
+.box6{
+    align-self: flex-end;
+}

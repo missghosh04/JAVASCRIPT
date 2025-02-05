@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+</head>
+<style>
+    .chlid {
+        background-color: blueviolet;
+        border: 2px solid black;
+        padding: 34px;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    .chlidContainer {
+        background-color: rgb(43, 226, 101);
+        border: 2px solid black;
+        padding: 34px;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    .container {
+        background-color: rgb(54, 12, 221);
+        border: 2px solid black;
+        padding: 34px;
+        margin: 20px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="chlidContainer">
+            <div class="chlid">
+                I am a child
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".chlid").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("Child was clicked")
+        })
+        document.querySelector(".chlidContainer").addEventListener("click", (e) => {
+            e.stopPropagation()
+            alert("ChildContainer was clicked")
+        })
+        document.querySelector(".container").addEventListener("click", (e) => {
+            alert("Container was clicked")
+        })
+        // what is event bubbling?
+        // if you activate any chlid event listener
+        // then it will also activate parent event listener
+        // stoppropagation method will stop the event bubbling
+        function getrandomcolor() {
+            let val1 = Math.ceil(0 + Math.random() * (255 - 0 + 1))
+            let val2 = Math.ceil(0 + Math.random() * (255 - 0 + 1))
+            let val3 = Math.ceil(0 + Math.random() * (255 - 0 + 1))
+            return `rgb(${val1},${val2},${val3})`
+        }
+        let a=setInterval(() => {
+            document.querySelector(".chlidContainer").style.backgroundColor =getrandomcolor()
+        }, 1000);
+        // setInterval is a fuction which take a function and time.after what time it will be repeated again again
+        // it takes interval into miliseconds
+        // console.log(a)
+        // clearInterval(1)
+        // it will stop the set interval .which number return the set interval it take that and stop that
+        // setTimeout(() => {
+        //     document.querySelector(".chlidContainer").style.backgroundColor =getrandomcolor()
+        // }, 1000);
+        // set timeout apply after a delay but run one time it will not repeat
+        // clearTimeout(1)
+        // to cancel the set timeout we use clear timeout
+    </script>
+
+</body>
+
+</html>

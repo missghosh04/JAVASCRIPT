@@ -1,0 +1,30 @@
+.container {
+    height: 40vh;
+    width: 80vw;
+    background-color: rgb(195, 122, 26);
+    border: 2px solid blue;
+}
+.box {
+    height: 80px;
+    width: 80px;
+    background-color: aqua;
+    border: 2px solid black;
+    animation: soumi 3s ease-in-out 1s infinite backwards,seya 4s ease-in 2s infinite ;
+}
+@keyframes soumi {
+    from{
+    background-color: red;
+    }
+    to{
+        transform: translateX(50%);
+    }
+}
+@keyframes seya {
+    from{
+        color: violet;
+
+    }
+    to{
+        transform: rotateX(90deg);
+    }
+}

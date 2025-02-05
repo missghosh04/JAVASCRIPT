@@ -1,0 +1,18 @@
+.container {
+    height: 40vh;
+    width: 80vw;
+    background-color: rgb(195, 122, 26);
+    border: 2px solid blue;
+}
+.box {
+    height: 80px;
+    width: 80px;
+    background-color: aqua;
+    border: 2px solid black;
+    /* transition:all 4s ease-in-out 3s;  */
+}
+.translate {
+    transform: translateX(20vw) translateY(20vh) scaleX(2); /* Proper syntax */
+    background-color: blue;
+    transition:all 4s ease-in-out 3s; 
+}
